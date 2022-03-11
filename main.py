@@ -3,7 +3,6 @@ import requests
 import json
 from colorama import Fore, init
 import os
-os.system("Cc Tools | Made by zEncrypte")
 init()
 
 num = int()
@@ -334,7 +333,6 @@ class CcTools():
 
 Soon more tools will be added
 
-Made By zEncrypte
 Github: https://github.com/zEncrypte
 """)
 
