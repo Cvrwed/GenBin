@@ -1,10 +1,10 @@
 import random
-import os
 import requests
 import json
 from colorama import Fore, init
-init()
+import os
 os.system("Cc Tools | Made by zEncrypte")
+init()
 
 num = int()
 amount = int()
