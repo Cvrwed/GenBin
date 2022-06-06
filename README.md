@@ -1,7 +1,7 @@
-# GenBin
+# CCTools
 
 Is a simple generator of bins and cc
 
-## Updates:
+## Changelog:
 
 - Src optimized
