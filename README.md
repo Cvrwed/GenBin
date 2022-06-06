@@ -1,6 +1,6 @@
 # GenBin
 
-Is a simple generator of bins
+Is a simple generator of bins and cc
 
 ## Updates:
 
