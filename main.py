@@ -1,100 +1,133 @@
-import random
-import requests
-import json
-from colorama import Fore, Style, init
 import os
-init()
+import sys
+import random
+import ctypes
+from time import sleep
+from pystyle import Colors, Colorate, Cursor
 
-num = int()
-amount = int()
-threads = int()
+rtp = Colors.red_to_purple
+rty = Colors.red_to_yellow
+gty = Colors.green_to_yellow
+lb = Colors.light_blue
+lr = Colors.light_red
+pp = Colors.purple
+wh = Colors.white
+v = Colorate.Vertical
+d = Colorate.Diagonal
+h = Colorate.Horizontal
+Cursor.HideCursor()
+os.system("cls")
+
+sx = "CCTools"
+ctypes.windll.kernel32.SetConsoleTitleW(sx)
+#clear
+def clear():
+    os.system('cls')
+#clear
+
+#slowmode ignore
+def tortuga(_str):
+    for letra in _str:
+        sys.stdout.write(letra);sys.stdout.flush();sleep(0.03)
+#slowmode ignore
+
 class Tools():
-	global num
-	global amount
-	global threads
 
 	def Bins():
-		print(Fore.WHITE + """
+		print(v(rtp,"""
    
-╭━━╮  ╭━━╮ ╭━╮ ╭╮      ╭━━━╮ ╭━━━╮ ╭━╮ ╭╮ 
-┃╭╮┃  ╰┫┣╯ ┃┃╰╮┃┃      ┃╭━╮┃ ┃╭━━╯ ┃┃╰╮┃┃ 
-┃╰╯╰╮  ┃┃  ┃╭╮╰╯┃      ┃┃ ╰╯ ┃╰━━╮ ┃╭╮╰╯┃ 
-┃╭━╮┃  ┃┃  ┃┃╰╮┃┃ ╭━━╮ ┃┃╭━╮ ┃╭━━╯ ┃┃╰╮┃┃ 
-┃╰━╯┃ ╭┫┣╮ ┃┃ ┃┃┃ ╰━━╯ ┃╰┻━┃ ┃╰━━╮ ┃┃ ┃┃┃ 
-╰━━━╯ ╰━━╯ ╰╯ ╰━╯      ╰━━━╯ ╰━━━╯ ╰╯ ╰━╯ 
-                      """)
+ ▄▄▄▄    ██▓ ███▄    █      ▄████ ▓█████  ███▄    █ 
+▓█████▄ ▓██▒ ██ ▀█   █     ██▒ ▀█▒▓█   ▀  ██ ▀█   █ 
+▒██▒ ▄██▒██▒▓██  ▀█ ██▒   ▒██░▄▄▄░▒███   ▓██  ▀█ ██▒
+▒██░█▀  ░██░▓██▒  ▐▌██▒   ░▓█  ██▓▒▓█  ▄ ▓██▒  ▐▌██▒
+░▓█  ▀█▓░██░▒██░   ▓██░   ░▒▓███▀▒░▒████▒▒██░   ▓██░
+░▒▓███▀▒░▓  ░ ▒░   ▒ ▒     ░▒   ▒ ░░ ▒░ ░░ ▒░   ▒ ▒ 
+▒░▒   ░  ▒ ░░ ░░   ░ ▒░     ░   ░  ░ ░  ░░ ░░   ░ ▒░
+ ░    ░  ▒ ░   ░   ░ ░    ░ ░   ░    ░      ░   ░ ░ 
+ ░       ░           ░          ░    ░  ░         ░ 
+      ░                                             
+                      """))
 		increasing = 1
-		amount = int(input("¿How many bin's would you like to generate?: "))
+		amount = int(input(f" {pp}¿How many bin's would you like to generate?: {wh}"))
 		while increasing <= amount:
-			generator = str(random.randint(3,6)) + str(random.randint(0,9)) + str(random.randint(0,9)) + str(random.randint(0,9)) +  str(random.randint(0,9)) + str(random.randint(0,9))
+			generator = str(random.randint(300000,600000))
 			bingen = generator + "xxxxxxxxxx"
-			print(bingen)
+			print(h(rtp, bingen))
 			increasing += 1
 			print(bingen, file=open("bins.txt", "a+"))
 
-		print("¿Do you want to continue using the tool? y/n")
-		back = input("[>] ").lower()
+		print(f" {pp}¿Do you want to continue using the tool? y/n")
+		back = input(f"{pp}[{lb}>{pp}] {wh}").lower()
 		if back == "y":
 			return Tools.modules()
 		else:
-			print("Thanks you for using CCTools..")
+			tortuga(f"{lb} Thanks you for using CCTools..{wh}")
 
 
 	def CC():
-		print(Fore.RED + Style.BRIGHT + """
-╭━━━╮ ╭━━━╮      ╭━━━╮ ╭━━━╮ ╭━╮ ╭╮ 
-┃╭━╮┃ ┃╭━╮┃      ┃╭━╮┃ ┃╭━━╯ ┃┃╰╮┃┃ 
-┃┃ ╰╯ ┃┃ ╰╯      ┃┃ ╰╯ ┃╰━━╮ ┃╭╮╰╯┃ 
-┃┃ ╭╮ ┃┃ ╭╮ ╭━━╮ ┃┃╭━╮ ┃╭━━╯ ┃┃╰╮┃┃ 
-┃╰━╯┃ ┃╰━╯┃ ╰━━╯ ┃╰┻━┃ ┃╰━━╮ ┃┃ ┃┃┃ 
-╰━━━╯ ╰━━━╯      ╰━━━╯ ╰━━━╯ ╰╯ ╰━╯ 
-                                                           
-			""")
+		print(v(rtp, """
+ ▄████▄   ▄████▄       ▄████ ▓█████  ███▄    █ 
+▒██▀ ▀█  ▒██▀ ▀█      ██▒ ▀█▒▓█   ▀  ██ ▀█   █ 
+▒▓█    ▄ ▒▓█    ▄    ▒██░▄▄▄░▒███   ▓██  ▀█ ██▒
+▒▓▓▄ ▄██▒▒▓▓▄ ▄██▒   ░▓█  ██▓▒▓█  ▄ ▓██▒  ▐▌██▒
+▒ ▓███▀ ░▒ ▓███▀ ░   ░▒▓███▀▒░▒████▒▒██░   ▓██░
+░ ░▒ ▒  ░░ ░▒ ▒  ░    ░▒   ▒ ░░ ▒░ ░░ ▒░   ▒ ▒ 
+  ░  ▒     ░  ▒        ░   ░  ░ ░  ░░ ░░   ░ ▒░
+░        ░           ░ ░   ░    ░      ░   ░ ░ 
+░ ░      ░ ░               ░    ░  ░         ░ 
+░        ░                
+			"""))
 		increasing = 1
-		amount = int(input("¿How many cards would you like to generate?: "))
+		amount = int(input(f"{pp}¿How many cards would you like to generate?: {wh}"))
 		while increasing <= amount:
-			generator = str(random.randint(4,6)) + str(random.randint(0,9)) + str(random.randint(0,9)) + str(random.randint(0,9)) +  str(random.randint(0,9)) + str(random.randint(0,9)) + str(random.randint(0,9)) + str(random.randint(0,9)) + str(random.randint(0,9)) + str(random.randint(0,9)) + str(random.randint(0,9)) + str(random.randint(0,9)) + str(random.randint(0,9)) + str(random.randint(0,9)) + str(random.randint(0,9)) + str(random.randint(0,9))
-			cvv = str(random.randint(0,9)) + str(random.randint(0,9)) + str(random.randint(0,9))
-			month = str(random.randint(1,12))
-			year = str(20) + str(random.randint(21,30))
-			exp = month + "/" + year
-			save = "\n" + "CC: " + generator + "\n" + "Exp: " + exp + "\n" + "Cvv: " + cvv + "\n" + "____________________________________"
+			generator = str(random.randint(4000000000000000,6000000000000000))
+			cvv = str(random.randint(000, 999))
+			month = str(random.randint(1, 12))
+			year = str(random.randint(21,30))
+			exp = month + "|" + year
+			save = "CC: " + generator + "|" + exp + "|" + cvv + "\n" + "____________________________________"
 			increasing += 1
 			print(save, file=open("ccs.txt", "a+"))
-			print(save)
+			print(h(rtp, save))
 
-		print("¿Do you want to continue using the tool? y/n")
-		back = input("[>] ").lower()
+		print(f" {pp}¿Do you want to continue using the tool? y/n")
+		back = input(f"{pp}[{lb}>{pp}] {wh}").lower()
 		if back == "y":
 			return Tools.modules()
 		else:
-			print("Thanks you for using CCTools..")
+			tortuga(f"{lb} Thanks you for using CCTools..{wh}")
 			
 	def modules():
-		os.system("cls")
-		print(Fore.CYAN + Style.BRIGHT + """
-╭━━━╮ ╭━━━╮       ╭━━━━╮ ╭━━━╮ ╭━━━╮ ╭╮    ╭━━━╮
-┃╭━╮┃ ┃╭━╮┃       ┃╭╮╭╮┃ ┃╭━╮┃ ┃╭━╮┃ ┃┃    ┃╭━╮┃
-┃┃ ╰╯ ┃┃ ╰╯  ╭━━╮ ╰╯┃┃╰╯ ┃┃ ┃┃ ┃┃ ┃┃ ┃┃    ┃╰━━╮
-┃┃ ╭╮ ┃┃ ╭╮  ╰━━╯   ┃┃   ┃┃ ┃┃ ┃┃ ┃┃ ┃┃ ╭╮ ╰━━╮┃
-┃╰━╯┃ ┃╰━╯┃         ┃┃   ┃╰━╯┃ ┃╰━╯┃ ┃╰━╯┃ ┃╰━╯┃  
-╰━━━╯ ╰━━━╯         ╰╯   ╰━━━╯ ╰━━━╯ ╰━━━╯ ╰━━━╯ 
+		print(v(rtp, fr"""
+ ▄████▄   ▄████▄     ▄▄▄█████▓ ▒█████   ▒█████   ██▓      ██████ 
+▒██▀ ▀█  ▒██▀ ▀█     ▓  ██▒ ▓▒▒██▒  ██▒▒██▒  ██▒▓██▒    ▒██    ▒ 
+▒▓█    ▄ ▒▓█    ▄    ▒ ▓██░ ▒░▒██░  ██▒▒██░  ██▒▒██░    ░ ▓██▄   
+▒▓▓▄ ▄██▒▒▓▓▄ ▄██▒   ░ ▓██▓ ░ ▒██   ██░▒██   ██░▒██░      ▒   ██▒
+▒ ▓███▀ ░▒ ▓███▀ ░     ▒██▒ ░ ░ ████▓▒░░ ████▓▒░░██████▒▒██████▒▒
+░ ░▒ ▒  ░░ ░▒ ▒  ░     ▒ ░░   ░ ▒░▒░▒░ ░ ▒░▒░▒░ ░ ▒░▓  ░▒ ▒▓▒ ▒ ░
+  ░  ▒     ░  ▒          ░      ░ ▒ ▒░   ░ ▒ ▒░ ░ ░ ▒  ░░ ░▒  ░ ░
+░        ░             ░      ░ ░ ░ ▒  ░ ░ ░ ▒    ░ ░   ░  ░  ░  
+░ ░      ░ ░                      ░ ░      ░ ░      ░  ░      ░  
+░        ░                                                       
+            ╔═══════════════════════════════════════╗
+            ║   Welcome {os.getlogin()}                       ║ 
+            ║   Github https://github.com/zEncrypte ║
+            ║═══════════════════════════════════════║
+            ║   [1] Random bins generator           ║
+            ║   [2] Random credit card generator    ║
+            ║   [3] Exit                            ║
+            ╚═══════════════════════════════════════╝
 
-[1] Random bins generator
-[2] Random credit card generator
-[3] Exit
-[!] Soon more tools will be added
-[Github] https://github.com/zEncrypte
-""")
-
-		resq = int(input(Fore.RED + "[>] "))
-
+"""))
+        
+		resq = int(input(f" {pp}[{lb}>{pp}] {wh}"))
+    
 		if resq == 1:
 			Tools.Bins()
 		elif resq == 2:
 			Tools.CC()
 		elif resq == 3:
-			print(Fore.BLUE + Style.BRIGHT + "Thanks you for using CCTools..")
+			tortuga(f"{lb} Thanks you for using CCTools..{wh}")
 			return
 
 Tools.modules()
