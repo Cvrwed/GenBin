@@ -20,10 +20,6 @@ os.system("cls")
 
 sx = "CCTools"
 ctypes.windll.kernel32.SetConsoleTitleW(sx)
-#clear
-def clear():
-    os.system('cls')
-#clear
 
 #slowmode ignore
 def tortuga(_str):
