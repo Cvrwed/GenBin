@@ -107,7 +107,7 @@ class Tools():
 ░        ░                                                       
             ╔═══════════════════════════════════════╗
             ║   Welcome {os.getlogin()}                       ║ 
-            ║   Github https://github.com/zEncrypte ║
+            ║   Github https://github.com/Swxy      ║
             ║═══════════════════════════════════════║
             ║   [1] Random bins generator           ║
             ║   [2] Random credit card generator    ║
