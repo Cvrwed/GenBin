@@ -107,7 +107,7 @@ class Tools():
 ░        ░                                                       
             ╔═══════════════════════════════════════╗
             ║   Welcome {os.getlogin()}                       ║ 
-            ║   Github https://github.com/Swxy      ║
+            ║   Github https://github.com/Swxy7w7   ║
             ║═══════════════════════════════════════║
             ║   [1] Random bins generator           ║
             ║   [2] Random credit card generator    ║
