@@ -1,2 +1,0 @@
-random2==1.0.1
-colorama=0.4.4
